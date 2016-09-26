@@ -6,9 +6,7 @@ import os
 
 print "Start of script..."
 os.system("cd")
-os.system("mv ~/ais/python/github_recloner.py ~/")
-os.system("rm -r -d ~/ais")
-os.system("mkdir ~/ais")
+os.system("mv ~/python/github_recloner.py ~/")
 print "0. Python"
 print "1. Bash"
 print "2. Httpscreenshot"
@@ -18,19 +16,24 @@ valid="0"
 while valid=="0":
     choice =raw_input("Which repo do you want?")
     if choice == "0":
-        os.system("git clone https://github.com/aisthanestha/python ~/ais/")
+        os.system("rm -r -d ~/python")
+        os.system("git clone https://github.com/aisthanestha/python ~/")
         valid="1"
     elif choice == "1":
-        os.system("git clone https://github.com/aisthanestha/bash ~/ais/")
+        os.system("rm -r -d ~/bash")
+        os.system("git clone https://github.com/aisthanestha/bash ~/")
         valid="1"
     elif choice == "2":
-        os.system("git clone https://github.com/aisthanestha/httpscreenshot ~/ais/")
+        os.system("rm -r -d ~/httpscreenshot")
+        os.system("git clone https://github.com/aisthanestha/httpscreenshot ~/")
         valid="1"
     elif choice == "3":
-        os.system("git clone https://github.com/aisthanestha/config ~/ais/")
+        os.system("rm -r -d ~/config")
+        os.system("git clone https://github.com/aisthanestha/config ~/")
         valid="1"
     elif choice == "4":
-        os.system("git clone https://github.com/aisthanestha/dvwa_installer ~/ais/")
+        os.system("rm -r -d ~/dvwa_installer")
+        os.system("git clone https://github.com/aisthanestha/dvwa_installer ~/")
         valid="1"
     else: print "Enter a valid choice. (0-5)"
 
