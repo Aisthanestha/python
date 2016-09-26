@@ -6,9 +6,10 @@ import os
 
 print "Start of script..."
 os.system("cd")
-os.system("mkdir repo")
 os.system("mv ~/repo/python/github_recloner.py ~/")
 os.system("rm -r -d ~/repo")
+os.system("mkdir ~/repo")
+os.system("cd ~/repo")
 print "0. Python"
 print "1. Bash"
 print "2. Httpscreenshot"
