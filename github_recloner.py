@@ -17,23 +17,23 @@ while valid=="0":
     choice =raw_input("Which repo do you want?")
     if choice == "0":
         os.system("rm -r -d ~/python")
-        os.system("git clone https://github.com/aisthanestha/python ~/")
+        os.system("git clone https://github.com/aisthanestha/python")
         valid="1"
     elif choice == "1":
         os.system("rm -r -d ~/bash")
-        os.system("git clone https://github.com/aisthanestha/bash ~/")
+        os.system("git clone https://github.com/aisthanestha/bash")
         valid="1"
     elif choice == "2":
         os.system("rm -r -d ~/httpscreenshot")
-        os.system("git clone https://github.com/aisthanestha/httpscreenshot ~/")
+        os.system("git clone https://github.com/aisthanestha/httpscreenshot")
         valid="1"
     elif choice == "3":
         os.system("rm -r -d ~/config")
-        os.system("git clone https://github.com/aisthanestha/config ~/")
+        os.system("git clone https://github.com/aisthanestha/config")
         valid="1"
     elif choice == "4":
         os.system("rm -r -d ~/dvwa_installer")
-        os.system("git clone https://github.com/aisthanestha/dvwa_installer ~/")
+        os.system("git clone https://github.com/aisthanestha/dvwa_installer")
         valid="1"
     else: print "Enter a valid choice. (0-5)"
 
