@@ -92,7 +92,7 @@ menu_choice = raw_input("Choose from above")
 
 menu_selector()
 cmd_list(oa_adder)
-
+print "%s" % oa_adder
 
 
 print "End of script..."
