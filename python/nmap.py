@@ -50,15 +50,22 @@ def menu_selector():
         else: print "Enter a valid choice... (0-5)"
         return menu_choice
 
-def cmd_list(menu_choice):
+def cmd_list(menu_choice, oa_adder):
     os.system("cd")
-    
-    if menu_choice == "0": os.system("")
-    elif menu_choice == "1": os.system("")
-    elif menu_choice == "2": os.system("")
-    elif menu_choice == "3": os.system("")
-    elif menu_choice == "4": os.system("")
-
+    if oa_adder=="0":
+        if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt")
+        elif menu_choice == "1": os.system("")
+        elif menu_choice == "2": os.system("")
+        elif menu_choice == "3": os.system("")
+        elif menu_choice == "4": os.system("")
+        else:
+    else:
+        if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt "%s" %oa_adder ")
+        elif menu_choice == "1": os.system("")
+        elif menu_choice == "2": os.system("")
+        elif menu_choice == "3": os.system("")
+        elif menu_choice == "4": os.system("")
+        else:
 ###
 #
 #Main body of script
