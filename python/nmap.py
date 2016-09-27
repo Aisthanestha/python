@@ -40,7 +40,6 @@ def menu():
 def menu_selector():
     valid="0"
     while valid=="0":
-        menu_choice = raw_input()
         if menu_choice == "0": print "0.Selected Host Discoverer..."; valid="1"
         elif menu_choice == "1": print "1.Selected Full Scan...";valid="1"
         elif menu_choice == "2": print "2.Selected TCP Connect...";valid="1"
@@ -48,29 +47,21 @@ def menu_selector():
         elif menu_choice == "4": print "4.Selected Masscan...";valid="1"
         elif menu_choice == "5": print "Exiting Script..."
         else: print "Enter a valid choice... (0-5)"
-        return menu_choice
 
-def cmd_list(menu_choice, oa_adder):
+def cmd_list(oa_adder):
     os.system("cd")
-    if oa_adder=="0":
-        if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt")
-        elif menu_choice == "1": os.system("")
-        elif menu_choice == "2": os.system("")
-        elif menu_choice == "3": os.system("")
-        elif menu_choice == "4": os.system("")
-        else:
-    else:
-        if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt "%s" %oa_adder ")
-        elif menu_choice == "1": os.system("")
-        elif menu_choice == "2": os.system("")
-        elif menu_choice == "3": os.system("")
-        elif menu_choice == "4": os.system("")
-        else:
+    if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder)
+    elif menu_choice == "1": os.system("")
+    elif menu_choice == "2": os.system("")
+    elif menu_choice == "3": os.system("")
+    elif menu_choice == "4": os.system("")
+    else: print ""
 ###
 #
 #Main body of script
 #
 ###
+
 print "Start of script..."
 
 
@@ -95,7 +86,10 @@ while valid_oa=="0":
         elif add_oa == "n" or add_oa=="no": print "There will be no output file for NMAP";valid_oa="1"
         else: print "Enter a valid choice ('yes', 'y', 'n', 'no')"
 
-menu() 
+menu()
+
+menu_choice = raw_input("Choose from above")
+
 menu_selector()
 cmd_list(oa_adder)
 
