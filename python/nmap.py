@@ -39,6 +39,7 @@ def menu():
 
 def menu_selector():
     valid="0"
+    menu_choice = raw_input("Choose from above")
     while valid=="0":
         if menu_choice == "0": print "0.Selected Host Discoverer..."; valid="1"
         elif menu_choice == "1": print "1.Selected Full Scan...";valid="1"
@@ -47,6 +48,7 @@ def menu_selector():
         elif menu_choice == "4": print "4.Selected Masscan...";valid="1"
         elif menu_choice == "5": print "Exiting Script..."
         else: print "Enter a valid choice... (0-5)"
+    return menu_choice
 
 def cmd_list(oa_adder):
     os.system("cd")
@@ -88,11 +90,9 @@ while valid_oa=="0":
 
 menu()
 
-menu_choice = raw_input("Choose from above")
 
 menu_selector()
-cmd_list(oa_adder)
-print "%s" % oa_adder
+cmd_list(oa_adder, menu_choice)
 
 
 print "End of script..."
