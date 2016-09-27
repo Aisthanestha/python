@@ -34,21 +34,18 @@ def menu():
         print "2. TCP CONNECT, OS, DETAILED SERVICE SCAN FOR OPEN PORTS"
         print "3. VIOLATE TCP CONNECTION WITH XMAS"
         print "4. MASSCAN PORT 80 OF TARGET(s)"
-        print "5. EXIT"
+        print "Anything else to exit."
         print "#############################\n"
 
 def menu_selector():
-    valid="0"
     menu_choice = raw_input("Choose from above")
-    while valid=="0":
-        if menu_choice == "0": print "0.Selected Host Discoverer..."; valid="1"
-        elif menu_choice == "1": print "1.Selected Full Scan...";valid="1"
-        elif menu_choice == "2": print "2.Selected TCP Connect...";valid="1"
-        elif menu_choice == "3": print "3.Selected TCP Violation...";valid="1"
-        elif menu_choice == "4": print "4.Selected Masscan...";valid="1"
-        elif menu_choice == "5": print "Exiting Script..."
-        else: print "Enter a valid choice... (0-5)"
-    return menu_choice;
+    if menu_choice == "0": print "0.Selected Host Discoverer..."
+    elif menu_choice == "1": print "1.Selected Full Scan..."
+    elif menu_choice == "2": print "2.Selected TCP Connect..."
+    elif menu_choice == "3": print "3.Selected TCP Violation..."
+    elif menu_choice == "4": print "4.Selected Masscan..."
+    else: print "Exiting..."
+    return menu_choice
 
 def cmd_list(oa_adder):
     menu_choice = menu_selector()
@@ -80,7 +77,7 @@ while valid_choice=="0":
         elif fping_creator=="n" or fping_creator=="no": 
                 print "We will not be generating a target list with fping"
                 valid_choice="1"
-        else: print "Enter valid choice ('yes','y', 'n', 'no')"
+        else: print "Enter a valid choice ('yes','y', 'n', 'no')"
 
 valid_open="0"
 while valid_open=="0":
