@@ -82,7 +82,7 @@ while valid_open=="0":
 valid_oa="0"
 while valid_oa=="0":
         add_oa = raw_input("Do you want to add NMAP output file?[y/n]").lower()
-        if add_oa == "y" or add_oa=="yes": name_oa = raw_input("What do you want to name the output file?");valid_oa="1";add_oa_valid="1";oa_adder=="-oA " + name_oa
+        if add_oa == "y" or add_oa=="yes": name_oa = raw_input("What do you want to name the output file?");valid_oa="1";add_oa_valid="1";oa_adder="-oA " + name_oa
         elif add_oa == "n" or add_oa=="no": print "There will be no output file for NMAP";valid_oa="1"
         else: print "Enter a valid choice ('yes', 'y', 'n', 'no')"
 
