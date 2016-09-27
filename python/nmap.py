@@ -3,7 +3,7 @@ import os
 
 #Global Elite(variables)
 add_oa_valid="0"
-oa_adder="0"
+oa_adder=""
 # Functions
 def fping_txt():
     #print "Set fping range for scan: (192.168.1.0/24 or 192.168.1.0-254)"
@@ -53,7 +53,7 @@ def menu_selector():
 def cmd_list(oa_adder):
     menu_choice = menu_selector()
     os.system("cd")
-    if menu_choice == "0": os.system("nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder)
+    if menu_choice == "0": print "nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder;os.system("nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder)
     elif menu_choice == "1": os.system("")
     elif menu_choice == "2": os.system("")
     elif menu_choice == "3": os.system("")
@@ -109,9 +109,6 @@ while valid_oa=="0":
         else: print "Enter a valid choice ('yes', 'y', 'n', 'no')"
 
 menu()
-
-
 cmd_list(oa_adder)
-
 
 print "End of script..."
