@@ -54,10 +54,10 @@ def cmd_list(oa_adder):
     menu_choice = menu_selector()
     os.system("cd")
     if menu_choice == "0": print "nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder;os.system("nmap -T4 -sn -iL ~/fping.txt %s" % oa_adder)
-    elif menu_choice == "1": os.system("")
-    elif menu_choice == "2": os.system("")
-    elif menu_choice == "3": os.system("")
-    elif menu_choice == "4": os.system("")
+    elif menu_choice == "1": print "nmap -T4 -p- -iL ~/fping.txt %s" % oa_adder; os.system("nmap -T4 -p- -iL ~/fping.txt %s" % oa_adder)
+    elif menu_choice == "2": print "nmap -T4 -O -sT -sV -iL ~/fping.txt %s" % oa_adder;os.system("nmap -T4 -O -sT -sV -iL ~/fping.txt %s" % oa_adder)
+    elif menu_choice == "3": print "nmap -T4 -sX -iL ~/fping.txt %s" % oa_adder;os.system("nmap -T4 -sX -iL ~/fping.txt %s" % oa_adder)
+    elif menu_choice == "4": print "masscan -p80 -iL ~/fping.txt";os.system("masscan -p80 -iL ~/fping.txt")
     else: print ""
 ###
 #
