@@ -46,6 +46,7 @@ while valid_remove=="0":
                 valid_remove="1"
         elif choice_1 == "n" or choice_1 == "no":
                 print "~/github_recloner.py remains"
+                os.system("mv ~/github_recloner.py ~/python/")
                 valid_remove="1"
         else: print "Enter valid choice. ('yes','y', 'n', 'no')" 
 
