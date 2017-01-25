@@ -1,7 +1,8 @@
 import os 
 
-a = open("song.dat","a+")
-for path, subdirs, files in os.walk(r" ~/Documents/Music"):
-        for filename in files:
-                f = os.path.join(path, filename)
-                a.write(str(f)+os.linsep)
+path=input("Enter Desired Path: ")#Take user input for a path to somewhere on the filesystem
+os.chdir(path)#Change to user specified DIR
+os.system('pwd')#Let's see where we are actually at
+
+os.system('ls | cat >> dir.txt')#list directory currently within, pipe ls into cat and feed cat into dir.txt > would overwrite previous dir.txt as >> appends
+
